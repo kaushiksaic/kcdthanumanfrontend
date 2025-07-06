@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setDashboardData, updateCount } from '../utils/dashboardSlice';
 import store from '../utils/appStore';
 import { addUser } from '../utils/userSlice';
+import whatsapp from '../assets/whatsapp.png';
 const BASE_URL = import.meta.env.VITE_API_URL;
 
 const Dashboard = () => {
@@ -135,6 +136,15 @@ const formatIST = (utcDateString) => {
 
     <div className="card-actions justify-center">
       <button className="btn btn-primary w-full" onClick={handleUpdateCount}>Add Count</button>
+    </div>
+    <div className='text-center pt-2 flex justify-center'>
+      <div>
+<img src={whatsapp} style={{width:'48px',height:'48px'}}/>
+      </div>
+      <div className='ml-2 pt-2'>
+ <a href='https://chat.whatsapp.com/CjxDHYTXzZ8H3j4OsIvrGm?mode=ac_t' style={{color:'#0000FF'}} target='blank'>Click Here to Join Whatsapp Group</a>
+      </div>
+     
     </div>
   </div>
 </div>
